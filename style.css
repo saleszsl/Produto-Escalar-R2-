@@ -142,7 +142,7 @@ input[type="text"], textarea {
     border: 1px solid rgb(255, 255, 255);
     border-radius: 4px;
     background: rgb(255, 255, 255);
-    color: #ffffff;
+    color: #000000;
     font-family: 'Courier New', Courier, monospace;
     box-sizing: border-box; /* Garante que padding não aumente a largura */
 }
@@ -191,3 +191,4 @@ button:hover {
 .hidden {
     display: none;
 }
+

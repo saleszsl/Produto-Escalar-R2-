@@ -1,18 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // --- LÓGICA DA NAVBAR ---
-    const navbar = document.querySelector('.navbar');
-    if (navbar) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('navbar-scrolled');
-            } else {
-                navbar.classList.remove('navbar-scrolled');
-            }
-        });
-    }
-
-
-    // --- FUNÇÕES AUXILIARES DA CALCULADORA ---
+// --- FUNÇÕES AUXILIARES DA CALCULADORA ---
     const parseVector = (str) => {
         if (!str || typeof str !== 'string') return [];
         const cleanedStr = str.replace(/[\[\]\s]/g, '');
@@ -159,3 +145,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+

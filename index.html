@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto Escalar (R2)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Produto Escalar (R2)</h1>
+        <p>Ferramentas para análise e cálculo de vetores.</p>
+    </header>
+
+    <main>
+        <div class="top-row">
+            <!-- Card 1: Análise de Vetor Único -->
+            <section id="single-vector-card" class="card">
+                <h2>Análise de Vetor Único</h2>
+                <div class="input-group">
+                    <label for="single-vector-input">Vetor (ex: 3,4,0)</label>
+                    <input type="text" id="single-vector-input" placeholder="Componentes do vetor">
+                </div>
+                <div class="button-group">
+                    <button id="check-null-btn">Verificar se é Nulo</button>
+                    <button id="calc-unit-btn">Calcular Vetor Unitário</button>
+                </div>
+                <div id="single-vector-result" class="result-box"></div>
+            </section>
+
+            <!-- Card 2: Comparação entre Vetores -->
+            <section id="compare-vectors-card" class="card">
+                <h2>Comparação entre Vetores</h2>
+                <div class="input-group">
+                    <label for="compare-vector-a">Vetor A</label>
+                    <input type="text" id="compare-vector-a" placeholder="Componentes do vetor A">
+                </div>
+                <div class="input-group">
+                    <label for="compare-vector-b">Vetor B</label>
+                    <input type="text" id="compare-vector-b" placeholder="Componentes do vetor B">
+                </div>
+                <div class="button-group">
+                    <button id="check-equal-btn">Verificar se são Iguais</button>
+                    <button id="check-opposite-btn">Verificar se são Opostos</button>
+                    <button id="check-collinear-btn">Verificar se são Colineares</button>
+                </div>
+                <div id="compare-vectors-result" class="result-box"></div>
+            </section>
+        </div>
+
+        <!-- Card 3: Operações com Múltiplos Vetores -->
+        <section id="multi-vector-card" class="card">
+            <h2>Operações com Múltiplos Vetores</h2>
+            <div class="input-group">
+                <label for="multi-vector-input">Vetores (um por linha)</label>
+                <textarea id="multi-vector-input" rows="4" placeholder="1,2,3&#10;4,5,6&#10;-2,-1,0"></textarea>
+            </div>
+            <div class="button-group">
+                <button id="calc-resultant-btn">Calcular Vetor Resultante</button>
+                <button id="calc-equilibrant-btn">Calcular Vetor Equilibrante</button>
+            </div>
+            <div id="multi-vector-result" class="result-box"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

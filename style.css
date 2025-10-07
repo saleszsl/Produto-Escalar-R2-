@@ -1,0 +1,193 @@
+/* Estilos gerais e animações */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0c0a17; /* Cor de fundo sólida como fallback */
+    background-image: 
+        radial-gradient(at 20% 25%, hsla(269, 80%, 50%, 0.3) 0px, transparent 50%),
+        radial-gradient(at 75% 30%, hsla(320, 75%, 55%, 0.3) 0px, transparent 50%),
+        radial-gradient(at 10% 80%, hsla(220, 85%, 60%, 0.3) 0px, transparent 50%),
+        radial-gradient(at 80% 85%, hsla(340, 80%, 65%, 0.35) 0px, transparent 50%);
+    background-size: 150% 150%;
+    color: #fff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: aurora-animation 20s ease-in-out infinite;
+}
+
+@keyframes aurora-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header {
+    text-align: center;
+    padding-top: 80px; /* Espaço para a navbar não sobrepor o título */
+    margin-bottom: 20px;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+    color: #f8cdda;
+}
+
+.navbar-scrolled {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0 0 15px 15px;
+}
+
+header h1 {
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.top-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Para compatibilidade com Safari */
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    transition: transform 0.3s ease;
+    flex: 1;
+}
+
+.card h2 {
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+#multi-vector-card {
+    width: 90%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Grupos de input e botões */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box; /* Garante que padding não aumente a largura */
+}
+
+button {
+    /* Estilos básicos e de layout */
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    flex-grow: 1; /* Faz os botões ocuparem o espaço disponível */
+    border-radius: 8px; /* Raio consistente com os cards */
+
+    /* Efeito Glassmorphism */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 6px 25px rgba(31, 38, 135, 0.3);
+}
+
+/* Caixa de Resultado */
+.result-box {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-left: 5px solid #f8cdda;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1em;
+    color: #fff;
+    white-space: pre-wrap; /* Mantém a formatação com quebras de linha */
+    word-wrap: break-word;
+}
+
+/* Classes de utilidade */
+.hidden {
+    display: none;
+}

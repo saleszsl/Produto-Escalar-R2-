@@ -1,10 +1,11 @@
-// --- FUNÇÕES AUXILIARES DA CALCULADORA ---
-    const parseVector = (str) => {
+document.addEventListener('DOMContentLoaded', () => {
+    // --- FUNÇÕES AUXILIARES DA CALCULADORA ---
+    function parseVector(str) {
         if (!str || typeof str !== 'string') return [];
         const cleanedStr = str.replace(/[\[\]\s]/g, '');
         if (!cleanedStr) return [];
         return cleanedStr.split(',').map(Number).filter(n => !isNaN(n));
-    };
+    }
 
     const formatVector = (vec) => `[${vec.map(n => n.toFixed(3)).join(', ')}]`;
 
@@ -145,4 +146,3 @@
         }
     });
 });
-
